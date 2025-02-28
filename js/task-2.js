@@ -28,12 +28,12 @@ const images = [
 const createGallery = imageInfo => {
   return `
     <li class="gallery-item">
-        <img src="${imageInfo.url}" alt="${imageInfo.alt}">
+        <img class="card-image" src="${imageInfo.url}" alt="${imageInfo.alt}">
     </li>
   `;
 };
 
-const galleryCardTemplate = images.map(image => createGallery(image)).join();
+const galleryCardTemplate = images.map(image => createGallery(image)).join('');
 console.log(galleryCardTemplate);
 
 const refs = {
