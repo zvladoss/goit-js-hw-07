@@ -1,31 +1,43 @@
-class Storage {
-  #items;
-  constructor(params) {
-    this.#items = params;
-  }
-  getItems() {
-    return this.#items;
-  }
+const images = [
+  {
+    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260',
+    alt: 'White and Black Long Fur Cat',
+  },
+  {
+    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260',
+    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+  },
+  {
+    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260',
+    alt: 'Group of Horses Running',
+  },
+  {
+    url: 'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg',
+    alt: 'Alpine Spring Meadows',
+  },
+  {
+    url: 'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg',
+    alt: 'Nature Landscape',
+  },
+  {
+    url: 'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
+    alt: 'Lighthouse Coast Sea',
+  },
+];
 
-  addItem(newItem) {
-    this.#items.push(newItem);
-  }
+const createGallery = imageInfo => {
+  return `
+    <li class="gallery-item">
+        <img src="${imageInfo.url}" alt="${imageInfo.alt}">
+    </li>
+  `;
+};
 
-  removeItem(itemToRemove) {
-    const itemIndex = this.#items.indexOf(itemToRemove);
-    if (itemIndex !== -1) {
-      this.#items.splice(itemIndex, 1);
-    }
-  }
-}
-const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+const galleryCardTemplate = images.map(image => createGallery(image)).join();
+console.log(galleryCardTemplate);
 
-storage.addItem('Droid');
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+const refs = {
+  galleryList: document.querySelector('.gallery'),
+};
 
-storage.removeItem('Prolonger');
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
-
-storage.removeItem('Scaner');
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+refs.galleryList.insertAdjacentHTML('beforeend', galleryCardTemplate);
