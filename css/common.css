@@ -4,29 +4,287 @@
 
 body {
   margin: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  font-family: 'Montseratt', sans-serif;
 }
 
-.gallery-item {
-  width: 320px;
-  height: 260px;
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+/**
+  |============================
+  | TASK-1-STYLES
+  |============================
+*/
+.task-1-container {
+  max-width: 440px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.item {
+  background-color: #f6f6fe;
+  padding: 16px;
+  border-radius: 8px;
+}
+.categories-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.categories-list-item {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+/**
+  |============================
+  | 
+  |============================
+*/
 
+/**
+  |============================
+  | TASK-2-STYLES
+  |============================
+*/
+.container {
+  max-width: 1128px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 24px;
+  row-gap: 48px;
   column-gap: 24px;
-  list-style: none;
 }
-.card-image {
+.gallery-list-item {
+  width: 360px;
+}
+.gallery-img {
+  display: block;
+  width: 360px;
+  height: 300px;
+}
+
+/**
+  |============================
+  | 
+  |============================
+*/
+
+/**
+  |============================
+  | TASK-3-STYLES
+  |============================
+*/
+
+.task-3-container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 408px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#name-input {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  border: 1px solid #808080;
+  border-radius: 4px;
   width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  margin-bottom: 16px;
+  outline: transparent;
+}
+
+#name-input::placeholder {
+  color: #2e2f42;
+}
+
+#name-input:focus {
+  border: 1px solid #000;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  word-wrap: break-word;
+}
+
+#name-output {
+}
+/**
+  |============================
+  | 
+  |============================
+*/
+
+/**
+  |============================
+  | TASK-4-STYLES
+  |============================
+*/
+.login-form {
+  font-family: inherit;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 408px;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-form label {
+  margin-bottom: 8px;
+}
+
+.login-form label:last-of-type {
+  margin-bottom: 16px;
+}
+
+input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  outline: transparent;
+}
+
+input:focus {
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.task-4-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: #4e75ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-color: transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.task-4-btn:hover,
+.task-4-btn:focus {
+  background-color: #6c8cff;
+}
+/**
+  |============================
+  | 
+  |============================
+*/
+
+/**
+  |============================
+  | TASK-5-SYLES
+  |============================
+*/
+
+.widget {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 100px 88px;
+  max-width: 345px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.task-5-paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.color {
+}
+.change-color {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4e75ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 8px;
+  padding: 8px 16px;
+  border-color: transparent;
 }
