@@ -99,7 +99,7 @@ p {
   column-gap: 24px;
 }
 .gallery-list-item {
-  width: 360px;
+  width: calc((100% - (24 * 2)) / 3);
 }
 .gallery-img {
   display: block;

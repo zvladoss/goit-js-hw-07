@@ -28,18 +28,16 @@ const refs = {
   galleryList: document.querySelector('.gallery'),
   container: document.querySelector('div'),
 };
-console.log(refs.galleryListItem);
 
 const createGallery = imageInfo => {
   return `
-    <li class"gallery-list-item">
+    <li class="gallery-list-item">
         <img class="gallery-img" src="${imageInfo.url}" alt="${imageInfo.alt}">
     </li>
   `;
 };
 
 const galleryCardTemplate = images.map(image => createGallery(image)).join('');
-console.log(galleryCardTemplate);
 
 refs.container.classList.add('container');
 
