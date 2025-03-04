@@ -20,3 +20,10 @@ refs.form.addEventListener('submit', event => {
   form.reset();
 });
 refs.btn.classList.add('task-4-btn');
+// const box = document.createElement('div');
+// refs.form.insertBefore(box, refs.form.firstChild);
+
+// box.classList.add('box');
+// refs.label.forEach(label => {
+//   box.appendChild(label);
+// });
